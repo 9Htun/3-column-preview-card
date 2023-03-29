@@ -1,0 +1,101 @@
+:root{
+/* ### Primary */
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+--Transparent-white: hsla(0, 0%, 100%, 0.75);   /*(paragraphs)*/
+--Very-light-gray: hsl(0, 0%, 95%);             /*(background, headings, buttons) */
+
+--Body-font-size: 15px;
+--Nomral-font-weight: 400;
+--Bold-font-weight: 700;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    padding: 1rem;
+    color: var(--Very-light-gray);
+    font-size: var(--Body-font-size);
+    font-family: "Lexend Deca";
+    align-items: start;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+.card-one{
+    background-color: var(--Bright-orange);
+}
+
+.card-two{
+    background-color: var(--Dark-cyan);
+}
+
+.card-three{
+    background-color: var(--Very-dark-cyan);
+}
+
+.card-one, .card-two, .card-three{
+    padding: 3rem;
+}
+
+.title{
+    font-family: "Big Shoulders Display";
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 0rem;
+}
+
+.content{
+    line-height: 1.5rem;
+}
+
+button{
+    border: none;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+.card-one button{
+    color: var(--Bright-orange);
+}
+
+.card-two button{
+    color: var(--Dark-cyan);
+}
+
+.card-three button{
+    color: var(--Very-dark-cyan);
+}
+
+button:hover{
+    background-color: transparent;
+    border: 1px solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+}
+
+@media screen and (min-width: 600px) {
+    body{
+        place-items: center;
+    }
+
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 920px;
+    }
+
+    button{
+        margin-top: 5rem;
+    }
+}
